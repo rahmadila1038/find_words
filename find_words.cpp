@@ -98,6 +98,35 @@ int main ()
 			    ada +=0;
 		    }
 		    cek=0;
+			
+// Diagonal Kiri Atas
+                    for(int k=0;k<input[a];k++){
+                        if(kata[a][k]==matriks[i-k][j-k]){
+                            cek=k;
+                        }else
+                            break;
+                    }
+                    if(cek == (input[a]-1)) {
+                        ada +=1;
+                    } else {
+                        ada +=0;
+                    }
+                    cek=0;
+			
+// Diagonal kiri bawah
+                    for(int k=0;k<input[a];k++){
+                        if(kata[a][k]==matriks[i+k][j-k]){
+                            cek=k;
+                        }else
+                            break;
+                    }
+                    if(cek == (input[a]-1)) {
+                        ada +=1;
+                    } else {
+                        ada +=0;
+                    }
+                    cek=0;
+			
                 }
             }
         }
