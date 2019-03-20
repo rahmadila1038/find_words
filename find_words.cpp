@@ -1,3 +1,8 @@
+//1817051006 Ratih Indah Wardani
+//1817051025 Intania Rahmadhilla
+//1817051038 Rahmadila Nurjannah
+//1817051041 Dewi Lestari
+//KELAS A
 #include <iostream>
 #include <cstring>
 using namespace std;
