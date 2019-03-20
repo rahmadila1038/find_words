@@ -164,10 +164,10 @@ if(a==0){
 }
 cout << a+1 << ". ";
 if(ada>0){
-	cout <<"   \tADA ";
+	cout <<"ADA";
 	ada = 0;
 }else
-	cout << "\tTIDAK ADA ";
+	cout <<"TIDAK ADA";
 	cout << endl;
 }
 	    
