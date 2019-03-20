@@ -43,6 +43,35 @@ int main ()
         for(int i=0;i<15;i++){
             for(int j=0;j<15;j++){
                 if(kata[a][0]==matriks[i][j]){
+			
+// Vertikal Bawah
+                    for (int k=0;k<input[a];k++){
+                        if(kata[a][k]==matriks[i+k][j]){
+                            cek=k;
+                        }else
+                            break;
+                    }
+                    if(cek == (input[a]-1)){
+                           ada +=1;
+                    }else{
+                           ada +=0;
+                    }
+                    cek=0;
+// Vertikal Atas
+		    for (int k=0;k<input[a];k++){
+		      	    if(kata[a][k]==matriks[i-k][j]){
+				    cek=k;
+			    }else
+				    break;
+		    }
+		    if(cek == (input[a]-1)){
+			    ada +=1;
+		    }else{
+			    ada +=0;
+		    }
+		    cek=0;
+			
+			
 //horizontal ke kanan
 		    for (int k=0; k<input[a]; k++){
 			    if (kata[a][k]==matriks[i][j+k]){
