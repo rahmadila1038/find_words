@@ -126,11 +126,51 @@ int main ()
                         ada +=0;
                     }
                     cek=0;
+	
+// Diagonal kanan atas
+		    for(int k=0;k<input[a];k++){
+			if(kata[a][k]==matriks[i-k][j+k]){
+			    cek=k;
+			}else
+			    break;
+		    }
+		    if(cek == (input[a]-1)){
+			ada +=1;
+		    } else {
+			ada +=0;
+		    }
+		    cek=0;
+			
+// Diagonal kanan bawah
+		    for(int k=0;k<input[a];k++){
+			if(kata[a][k]==matriks[i+k][j+k]){
+			    cek=k;
+			}else
+			    break;
+		    }
+		    if(cek == (input[a]-1)){
+			ada +=1;
+		    } else {
+			 ada +=0;
+		    }
+		    cek=0;
 			
                 }
             }
         }
 
+if(a==0){
+	cout <<  ">>>>>   	Hasil Pencarian		<<<<<"  << endl;
+}
+cout << a+1 << ". ";
+if(ada>0){
+	cout <<"   \tADA ";
+	ada = 0;
+}else
+	cout << "\tTIDAK ADA ";
+	cout << endl;
+}
+	    
 return 0;
 }
 void cetak(){
