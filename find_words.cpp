@@ -2,7 +2,7 @@
 #include <cstring>
 using namespace std;
 
-	 char kata[15][15]={    {'t','g','b','w','w','i','n','t','e','r','w','s','e','s','n'},
+	 char matriks[15][15]={    {'t','g','b','w','w','i','n','t','e','r','w','s','e','s','n'},
 	 			{'a','a','u','n','t','t','m','m','h','f','o','o','d','n','b'},
 	 			{'j','l','w','c','q','l','d','z','m','p','m','v','d','m','r'},
 	 			{'a','s','a','g','m','q','u','w','v','v','b','s','o','h','i'},
@@ -22,25 +22,69 @@ void cetak();
 int main () 
 {
 	cetak();
+//jumlah kata yang akan dicari
 		int jumlah;
 		cout<<endl;
-		cout<<"Masukkan jumlah kata yang ingin anda temukan  : "; cin>>jumlah;
-		char huruf[jumlah][15];
-		int pjkata[jumlah];
+		cout<<"Masukkan jumlah kata yang ingin anda temukan  : "; 
+		cin>>jumlah;
+		char kata[jumlah][15];
+		int input[jumlah];
 		cin.ignore();
+//input kata
 		for (int i=0;i<jumlah;i++){
 			cout<<i+1<<"  ";
-			cin.getline(huruf[i],15);
-			pjkata[i]=strlen(huruf[i]);
+			cin.getline(kata[i],15);
+//menghitung jumlah huruf pada kata yang dicari
+			input[i]=strlen(kata[i]);
 		}
+// Mencari Kata 
+    int cek=0,ada=0;
+    for(int a=0;a<jumlah;a++){
+        for(int i=0;i<15;i++){
+            for(int j=0;j<15;j++){
+                if(kata[a][0]==matriks[i][j]){
+//horizontal ke kanan
+		    for (int k=0; k<input[a]; k++){
+			    if (kata[a][k]==matriks[i][j+k]){
+				    cek=k;
+			    }else
+				    break;
+		    }
+		    if(cek==(input[a]-1)){
+		  	    ada +=1;
+		    }else{
+			    ada +=0;
+		    }
+		    cek=0;
+//horizontal ke kiri
+		    for (int k=0; k<input[a]; k++){
+			    if (kata[a][k]==matriks[i][j-k]){
+				    cek=k;
+			    }else
+				    break;
+		    }
+		    if(cek==(input[a]-1)){
+			    ada +=1;
+		    }else{
+			    ada +=0;
+		    }
+		    cek=0;
+                }
+            }
+        }
+
 return 0;
 }
 void cetak(){
-    for (int i=0;i<15;i++){
-        cout << "-----------------------------------------------------------"<<endl;
+	cout<<"**********************************************************"<<endl<<endl;
+	cout<<"\t\t\tFIND WORD"<<endl<<endl;
+	cout<<"**********************************************************"<<endl<<endl;
+
+    for(int i=0;i<15;i++){
         for(int j=0;j<15;j++)
-            cout << kata[i][j] << " | ";
-        cout<<endl;
+            cout << matriks[i][j] << " | ";
+        cout << endl;
+       
  }
 }
 
