@@ -2,7 +2,7 @@
 #include <cstring>
 using namespace std;
 
-	 char matriks[15][15]={    {'t','g','b','w','w','i','n','t','e','r','w','s','e','s','n'},
+	 char matriks[15][15]={ {'t','g','b','w','w','i','n','t','e','r','w','s','e','s','n'},
 	 			{'a','a','u','n','t','t','m','m','h','f','o','o','d','n','b'},
 	 			{'j','l','w','c','q','l','d','z','m','p','m','v','d','m','r'},
 	 			{'a','s','a','g','m','q','u','w','v','v','b','s','o','h','i'},
@@ -16,8 +16,7 @@ using namespace std;
 	 			{'l','q','z','q','n','n','m','r','z','j','j','s','c','l','g'},
 	 			{'m','o','s','g','z','c','z','e','t','d','b','o','o','t','o'},
 	 			{'p','d','c','r','z','m','s','n','g','r','d','n','r','p','z'},
-	 			{'o','h','n','k','z','w','a','t','e','r','j','g','t','r','a'}	
-			   };
+	 			{'o','h','n','k','z','w','a','t','e','r','j','g','t','r','a'}	 };
 void cetak();
 int main () 
 {
@@ -44,7 +43,7 @@ int main ()
             for(int j=0;j<15;j++){
                 if(kata[a][0]==matriks[i][j]){
 			
-// Vertikal Bawah
+// Vertikal Bawah ke atas
                     for (int k=0;k<input[a];k++){
                         if(kata[a][k]==matriks[i+k][j]){
                             cek=k;
@@ -57,7 +56,7 @@ int main ()
                            ada +=0;
                     }
                     cek=0;
-// Vertikal Atas
+// Vertikal Atas ke bawah
 		    for (int k=0;k<input[a];k++){
 		      	    if(kata[a][k]==matriks[i-k][j]){
 				    cek=k;
@@ -72,7 +71,7 @@ int main ()
 		    cek=0;
 			
 			
-//horizontal ke kanan
+//horizontal kiri ke kanan
 		    for (int k=0; k<input[a]; k++){
 			    if (kata[a][k]==matriks[i][j+k]){
 				    cek=k;
@@ -85,7 +84,7 @@ int main ()
 			    ada +=0;
 		    }
 		    cek=0;
-//horizontal ke kiri
+//horizontal kanan ke kiri
 		    for (int k=0; k<input[a]; k++){
 			    if (kata[a][k]==matriks[i][j-k]){
 				    cek=k;
@@ -160,7 +159,7 @@ int main ()
         }
 
 if(a==0){
-	cout <<  ">>>>>   	Hasil Pencarian		<<<<<"  << endl;
+	cout <<  ">>>>>   Hasil Pencarian	<<<<<"  << endl;
 }
 cout << a+1 << ". ";
 if(ada>0){
