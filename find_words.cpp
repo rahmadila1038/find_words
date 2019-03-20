@@ -17,11 +17,13 @@ using namespace std;
 	 			{'m','o','s','g','z','c','z','e','t','d','b','o','o','t','o'},
 	 			{'p','d','c','r','z','m','s','n','g','r','d','n','r','p','z'},
 	 			{'o','h','n','k','z','w','a','t','e','r','j','g','t','r','a'}	 };
+void cetak();
 int main () 
 {
+	cetak();
 		int jumlah;
 		cout<<endl;
-		cout<<"jumlah kata yang dicari ? "; cin>>jumlah;
+		cout<<"Masukkan jumlah kata yang ingin anda temukan  : "; cin>>jumlah;
 		char huruf[jumlah][15];
 		int pjkata[jumlah];
 		cin.ignore();
@@ -31,5 +33,13 @@ int main ()
 			pjkata[i]=strlen(huruf[i]);
 		}
 return 0;
+}
+void cetak(){
+    for(int i=0;i<15;i++){
+        cout << "-----------------------------------------------------------"<<endl;
+        for(int j=0;j<15;j++)
+            cout << kata[i][j] << " | ";
+        cout << endl;
+ }
 }
 
