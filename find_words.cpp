@@ -2,7 +2,7 @@
 #include <cstring>
 using namespace std;
 
-	 char kata[15][15]={ {'t','g','b','w','w','i','n','t','e','r','w','s','e','s','n'},
+	 char kata[15][15]={    {'t','g','b','w','w','i','n','t','e','r','w','s','e','s','n'},
 	 			{'a','a','u','n','t','t','m','m','h','f','o','o','d','n','b'},
 	 			{'j','l','w','c','q','l','d','z','m','p','m','v','d','m','r'},
 	 			{'a','s','a','g','m','q','u','w','v','v','b','s','o','h','i'},
@@ -16,7 +16,8 @@ using namespace std;
 	 			{'l','q','z','q','n','n','m','r','z','j','j','s','c','l','g'},
 	 			{'m','o','s','g','z','c','z','e','t','d','b','o','o','t','o'},
 	 			{'p','d','c','r','z','m','s','n','g','r','d','n','r','p','z'},
-	 			{'o','h','n','k','z','w','a','t','e','r','j','g','t','r','a'}	 };
+	 			{'o','h','n','k','z','w','a','t','e','r','j','g','t','r','a'}	
+			   };
 void cetak();
 int main () 
 {
@@ -27,7 +28,7 @@ int main ()
 		char huruf[jumlah][15];
 		int pjkata[jumlah];
 		cin.ignore();
-		for(int i=0;i<jumlah;i++){
+		for (int i=0;i<jumlah;i++){
 			cout<<i+1<<"  ";
 			cin.getline(huruf[i],15);
 			pjkata[i]=strlen(huruf[i]);
@@ -35,11 +36,11 @@ int main ()
 return 0;
 }
 void cetak(){
-    for(int i=0;i<15;i++){
+    for (int i=0;i<15;i++){
         cout << "-----------------------------------------------------------"<<endl;
         for(int j=0;j<15;j++)
             cout << kata[i][j] << " | ";
-        cout << endl;
+        cout<<endl;
  }
 }
 
